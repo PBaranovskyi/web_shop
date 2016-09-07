@@ -24,6 +24,7 @@ CREATE TABLE product (
         name varchar not null,
         price Float  not null,
         category varchar null,
-        desription varchar null
+        desription varchar null,
+        quantity int
         );
 

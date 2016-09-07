@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
  * Created by red3 on 9/6/2016.
  */
 @Configuration
-@ComponentScan("org.midnightcoding")
+@ComponentScan("org.midnightcoding.services")
 @Import(DataSourceConfig.class)
 public class Config {
     // may now use @Autowired to reference beans from other @Configuration classes, XML, etc

@@ -1,5 +1,8 @@
 package org.midnightcoding.services;
 
+import main.java.org.midnightcoding.vo.CustomerVO;
+import main.java.org.midnightcoding.vo.OrderVO;
+import main.java.org.midnightcoding.vo.ProductVO;
 import org.midnightcoding.entities.Customer;
 import org.midnightcoding.entities.Order;
 import org.midnightcoding.entities.Product;
@@ -29,13 +32,13 @@ public class MainController {
 
     @RequestMapping("/getView")
     public String getAll(Model model){
-        List<Order> orders = orderRepo.findAll();
+        List<OrderVO> orders = orderRepo.findAll();
         model.asMap().put("orders", orders);
 
-        List<Customer> customers = custRepo.findAll();
+        List<CustomerVO> customers = custRepo.findAll();
         model.asMap().put("customers", orders);
 
-        List<Product> products = productRepo.findAll();
+        List<ProductVO> products = productRepo.findAll();
         model.asMap().put("products", orders);
 
         return "mainView";

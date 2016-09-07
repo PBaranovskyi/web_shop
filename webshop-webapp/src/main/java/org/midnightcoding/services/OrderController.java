@@ -1,5 +1,6 @@
 package org.midnightcoding.services;
 
+import main.java.org.midnightcoding.vo.OrderVO;
 import org.midnightcoding.entities.Order;
 import org.midnightcoding.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class OrderController {
 
     @RequestMapping("/viewAll")
     public String viewAllOrders(Model model){
-        List<Order> orders = repo.findAll();
+        List<OrderVO> orders = repo.findAll();
         model.asMap().put("orders", orders);
         return "orderView";
     }

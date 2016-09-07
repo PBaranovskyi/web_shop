@@ -1,5 +1,6 @@
 package org.midnightcoding.repositories;
 
+import main.java.org.midnightcoding.vo.OrderVO;
 import org.midnightcoding.entities.Order;
 import org.springframework.stereotype.Repository;
 
@@ -10,5 +11,5 @@ import java.util.List;
  */
 @Repository
 public interface OrderRepository extends Repository {
-    List<Order> findAll();
+    List<OrderVO> findAll();
 }

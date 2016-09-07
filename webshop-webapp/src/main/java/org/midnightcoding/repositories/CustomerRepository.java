@@ -1,5 +1,6 @@
 package org.midnightcoding.repositories;
 
+import main.java.org.midnightcoding.vo.CustomerVO;
 import org.midnightcoding.entities.Customer;
 import org.midnightcoding.entities.Order;
 import org.springframework.stereotype.Repository;
@@ -11,5 +12,5 @@ import java.util.List;
  */
 @Repository
 public interface CustomerRepository extends Repository {
-    List<Customer> findAll();
+    List<CustomerVO> findAll();
 }
